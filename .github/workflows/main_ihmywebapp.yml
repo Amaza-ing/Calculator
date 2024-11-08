@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '6.0.x'
 
       - name: Build application
-        run: dotnet build Calculator/Calculator.csproj --configuration Release
+        run: dotnet build Calculator.csproj --configuration Release
     
       - name: Publish application
-        run: dotnet publish Calculator/Calculator.csproj --configuration Release --output build_output    
+        run: dotnet publish Calculator.csproj --configuration Release --output build_output    
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
